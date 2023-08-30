@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "categories": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "nodeId": {
+                  "type": "integer"
+                },
+                "parentNodeId": {
+                  "type": "null"
+                },
+                "media": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "caption": {
+                      "type": "string"
+                    },
+                    "path": {
+                      "type": "string"
+                    },
+                    "alternative": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "caption",
+                    "path",
+                    "alternative"
+                  ]
+                },
+                "amount": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "id",
+                "type",
+                "code",
+                "title",
+                "nodeId",
+                "parentNodeId",
+                "media",
+                "amount"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "categories"
+      ]
+    }
+  },
+  "required": [
+    "data"
+  ]
+}

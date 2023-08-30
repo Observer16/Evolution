@@ -1,4 +1,4 @@
-package utils.pojos.token;
+package utils.pojos.catalog;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,8 +8,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 
-class PatchToken {
-    private String platform;
-    private String version;
-    private String build;
+public class CatalogRoot {
+    private Data data;
 }

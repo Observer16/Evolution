@@ -7,7 +7,7 @@ public class HeaderUtils {
 
     public static Headers createHeaders(String authToken) {
         return new Headers(
-                new Header("Authorization", "Bearer " + authToken),
+                new Header("X-Auth-Token", authToken),
                 new Header("accept", "application/json")
         );
     }
