@@ -1,13 +1,15 @@
 package utils.pojos.catalog;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import org.apache.commons.chain.Catalog;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+public class CatalogRoot
+{
+    private CatalogData data;
 
-public class CatalogRoot {
-    private Data data;
+    public void setData(CatalogData data){
+        this.data = data;
+    }
+    public CatalogData getData(){
+        return this.data;
+    }
 }

@@ -12,9 +12,32 @@
               "type": "object",
               "properties": {
                 "id": {
-                  "type": "integer"
+                  "type": "string"
                 },
-                "type": {
+                "code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "nodeId": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "id",
+                "code",
+                "title",
+                "nodeId"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "parentCategoryId": {
                   "type": "string"
                 },
                 "code": {
@@ -27,44 +50,36 @@
                   "type": "integer"
                 },
                 "parentNodeId": {
-                  "type": "null"
+                  "type": "integer"
                 },
-                "media": {
+                "image": {
                   "type": "object",
                   "properties": {
                     "type": {
                       "type": "string"
                     },
-                    "caption": {
+                    "title": {
                       "type": "string"
                     },
-                    "path": {
-                      "type": "string"
-                    },
-                    "alternative": {
+                    "url": {
                       "type": "string"
                     }
                   },
                   "required": [
                     "type",
-                    "caption",
-                    "path",
-                    "alternative"
+                    "title",
+                    "url"
                   ]
-                },
-                "amount": {
-                  "type": "integer"
                 }
               },
               "required": [
                 "id",
-                "type",
+                "parentCategoryId",
                 "code",
                 "title",
                 "nodeId",
                 "parentNodeId",
-                "media",
-                "amount"
+                "image"
               ]
             }
           ]

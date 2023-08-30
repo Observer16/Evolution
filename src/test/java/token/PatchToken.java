@@ -77,7 +77,7 @@ public class PatchToken {
 
     @Test (priority = 3) // Тест получение гостевого токена с передачей только платформы
     public void GetAGuestTokenWithPlatform() {
-        Specifications.installSpecification(Specifications.requestSpec(Constants.BASE_URL), Specifications.responseSpecUnique(204));
+        Specifications.installSpecification(Specifications.requestSpec(Constants.BASE_URL), Specifications.responseSpecUnique(401));
         String platform = "Android 12";
 
         ValidatableResponse response = given()

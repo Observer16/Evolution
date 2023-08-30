@@ -1,14 +1,16 @@
 package utils.pojos.catalog;
-
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import org.apache.commons.chain.Catalog;
 
 import java.util.ArrayList;
+import java.util.List;
+public class CatalogData
+{
+    private ArrayList<CatalogCategories> categories;
 
-@lombok.Data
-@AllArgsConstructor
-@NoArgsConstructor
-
-public class CatalogData {
-    private ArrayList<CatalogCategory> categories;
+    public void setCategories(ArrayList<CatalogCategories> categories){
+        this.categories = categories;
+    }
+    public ArrayList<CatalogCategories> getCategories(){
+        return this.categories;
+    }
 }
